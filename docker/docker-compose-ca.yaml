@@ -1,0 +1,35 @@
+version: '2' 
+
+networks:
+  test:
+
+
+services:
+  
+  ordererOrgCA:
+    container_name: ordererOrgCA
+    image: hyperledger/fabric-ca:$CA_IMAGE_TAG
+    command: sh -c 'fabric-ca-server start -d'
+    environment:
+       - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
+    volumes:
+       - ../organizations/fabric-ca/ordererOrg:/etc/hyperledger/fabric-ca
+    networks:
+       - test
+    ports:
+       - 6000:6000
+
+
+  org1CA:
+    container_name: org1CA
+    image: hyperledger/fabric-ca:$CA_IMAGE_TAG
+    command: sh -c 'fabric-ca-server start -d'
+    environment:
+       - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
+    volumes:
+       - ../organizations/fabric-ca/org1:/etc/hyperledger/fabric-ca
+    networks:
+       - test
+    ports:
+       - 6001:6001
+

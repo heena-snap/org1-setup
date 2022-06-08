@@ -1,0 +1,10 @@
+version: 0
+tlsconfig:
+  certpath: ""
+  keypath: ""
+  peercacertpath: /home/appuser/fot/organizations/peerOrganizations/org1.com/tlsca/localhost-6001.pem
+  timeout: 0s
+signerconfig:
+  mspid: Org1MSP
+  identitypath: /home/appuser/fot/organizations/peerOrganizations/org1.com/users/Admin@org1.com/msp/signcerts/cert.pem
+  keypath: /home/appuser/fot/organizations/peerOrganizations/org1.com/users/Admin@org1.com/msp/keystore/priv_sk

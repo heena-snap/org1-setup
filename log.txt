@@ -1,0 +1,2 @@
+Installed chaincodes on peer:
+Package ID: fot_v3.0:8ab92c12dccd54048447f30cb790d92bf8c6d4f8c603efec7679463df72446df, Label: fot_v3.0

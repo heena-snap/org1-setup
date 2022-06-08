@@ -1,0 +1,10 @@
+{
+    "index": {
+      "fields": [
+        "ProductReference"
+      ]
+    },
+    "ddoc": "ProductReferenceDoc",
+    "name": "ProductReferenceIndex",
+    "type": "json"
+}
